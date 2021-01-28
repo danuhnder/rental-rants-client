@@ -68,7 +68,7 @@ export default function useUserAuth(initial) {
     const username = state.userName;
     const password = state.password;
     // send the username and password to the server
-    const response = await axios.post('http://localhost:3001/api/login', {
+    const response = await axios.post('/api/login', {
       username,
       password,
     });
@@ -86,7 +86,7 @@ export default function useUserAuth(initial) {
 
   const handleRegister = async (onSuccess, onError) => {
     const user = state;
-    const response = await axios.post('http://localhost:3001/api/signup', user);
+    const response = await axios.post('/api/signup', user);
     if (response.data.userName) {
       localStorage.setItem('user', JSON.stringify(response.data));
       onSuccess();
