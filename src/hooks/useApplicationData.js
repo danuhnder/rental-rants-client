@@ -63,7 +63,7 @@ export default function useApplicationData(initial) {
   const getReviewsFromCoords = () => {
     const lat = parseFloat(state.place.latLng.lat).toFixed(5);
     const lng = parseFloat(state.place.latLng.lng).toFixed(5);
-    Promise.all([axios.get(`http://localhost:3001/api/${lat}/${lng}`)]).then(
+    Promise.all([axios.get(`/api/${lat}/${lng}`)]).then(
       res => {
         // console.log(res[0].data);
         setPlaceReviewData(res[0].data[0]);
@@ -83,7 +83,7 @@ export default function useApplicationData(initial) {
     // console.log('review data, ', reviewData);
     // console.log(reviewData);
     await axios
-      .post(`http://localhost:3001/api/review`, { reviewData })
+      .post(`/api/review`, { reviewData })
       .then(res => {
         console.log('Saved to the DB');
       })
