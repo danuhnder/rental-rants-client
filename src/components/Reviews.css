@@ -1,0 +1,39 @@
+.reviews {
+  display: flex;
+  pointer-events: all !important;
+  overflow-x: scroll;
+}
+
+.review-card {
+  -moz-box-shadow:    3px 3px 5px 6px rgba(226, 226, 226, 0.582);
+  -webkit-box-shadow: 3px 3px 5px 6px rgba(226, 226, 226, 0.582);
+  box-shadow:         3px 3px 5px 6px rgba(226, 226, 226, 0.582);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  max-height: 200px;
+  min-height: 200px;
+  max-width: 200px;
+  min-width: 200px;
+  pointer-events: all;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: large;
+}
+
+.text {
+  font-size: larger;
+}
+
+.link {
+  font-size: larger;
+}
